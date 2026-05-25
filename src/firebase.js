@@ -4,14 +4,14 @@ import { getStorage } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAQIo0NWuCLZAewZdBnzgH1CYGBV5U4cOA",
-  authDomain: "changjo-bulletin-board.firebaseapp.com",
-  databaseURL: "https://changjo-bulletin-board-default-rtdb.firebaseio.com",
-  projectId: "changjo-bulletin-board",
-  storageBucket: "changjo-bulletin-board.firebasestorage.app",
-  messagingSenderId: "826120461618",
-  appId: "1:826120461618:web:1d482a786b49a9450d4b2b",
-  measurementId: "G-KCLWCEGQLC"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
